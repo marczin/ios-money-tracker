@@ -9,30 +9,26 @@ import UIKit
 
 protocol HomeViewModelDelegate: AnyObject {
     
-    func homeViewModel(_ viewModel: HomeViewModel,
-                       totalBalance total: String,
-                       monthlyChange monthly: String,
-                       moneySpend spend: String)
-    
     func homeViewModel(_ viewModel: HomeViewModel, addSpendController addController: AddSpendViewController)
+    
+    func homeViewModel(_ viewModel: HomeViewModel, total: String, monthly: String, spend: String)
 }
-class HomeViewModel {
+
+class HomeViewModel  {
 
     // MARK: - Properties
     weak var delegate: HomeViewModelDelegate?
+    
+    
 
     // MARK: - Methods
     
     @objc func addButtonTapped(){
         let addController = AddSpendViewController()
-        self.delegate?.homeViewModel(self, addSpendController: addController)
-        
+        delegate?.homeViewModel(self, addSpendController: addController)
     }
     
-    @objc func changeWalletValue(){
-        self.delegate?.homeViewModel(self,
-                                     totalBalance: "-100,00 PLN",
-                                     monthlyChange: "-50,00 PLN",
-                                     moneySpend: "-30,00 PLN")
+    func viewDidLoadAction(){
+        delegate?.homeViewModel(self, total: "50 pln", monthly: "60 pln", spend: "70 PLN")
     }
 }

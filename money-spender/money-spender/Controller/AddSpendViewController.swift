@@ -9,7 +9,7 @@ import UIKit
 
 class AddSpendViewController: UIViewController {
     
-    // MARK: - declaration
+    // MARK: - properties
     
     let addSpendView = AddSpendView()
     
