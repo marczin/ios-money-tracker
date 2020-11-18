@@ -11,6 +11,8 @@
 		182CE1E2255DA155008F2859 /* AddSpendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CE1E1255DA155008F2859 /* AddSpendView.swift */; };
 		182CE1E5255DAB75008F2859 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CE1E4255DAB75008F2859 /* LoadViewController.swift */; };
 		182CE1F7255E87A8008F2859 /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CE1F6255E87A7008F2859 /* Spend.swift */; };
+		189D891225606E4F00A72C36 /* AddTransactionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D891125606E4F00A72C36 /* AddTransactionHeader.swift */; };
+		189D89162560810C00A72C36 /* DateTransation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D89152560810C00A72C36 /* DateTransation.swift */; };
 		18D0CCCC255897270078BABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0CCCB255897270078BABB /* AppDelegate.swift */; };
 		18D0CCD0255897270078BABB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0CCCF255897270078BABB /* ViewController.swift */; };
 		18D0CCD52558972A0078BABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D0CCD42558972A0078BABB /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		182CE1E1255DA155008F2859 /* AddSpendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendView.swift; sourceTree = "<group>"; };
 		182CE1E4255DAB75008F2859 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		182CE1F6255E87A7008F2859 /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
+		189D891125606E4F00A72C36 /* AddTransactionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionHeader.swift; sourceTree = "<group>"; };
+		189D89152560810C00A72C36 /* DateTransation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransation.swift; sourceTree = "<group>"; };
 		18D0CCC8255897270078BABB /* money-spender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "money-spender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D0CCCB255897270078BABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D0CCCF255897270078BABB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,22 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		189D890F25606E2B00A72C36 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		189D8914256080E300A72C36 /* SharedComponents */ = {
+			isa = PBXGroup;
+			children = (
+				189D891125606E4F00A72C36 /* AddTransactionHeader.swift */,
+				189D89152560810C00A72C36 /* DateTransation.swift */,
+			);
+			path = SharedComponents;
+			sourceTree = "<group>";
+		};
 		18D0CCBF255897270078BABB = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,8 @@
 		18D0CCCA255897270078BABB /* money-spender */ = {
 			isa = PBXGroup;
 			children = (
+				189D8914256080E300A72C36 /* SharedComponents */,
+				189D890F25606E2B00A72C36 /* New Group */,
 				182CE1F5255E8790008F2859 /* model */,
 				18D0CCE62558982A0078BABB /* Controller */,
 				18D0CCE5255898240078BABB /* View */,
@@ -252,8 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D0CCD0255897270078BABB /* ViewController.swift in Sources */,
+				189D89162560810C00A72C36 /* DateTransation.swift in Sources */,
 				18D0CCF2255A007F0078BABB /* HomeViewModel.swift in Sources */,
 				182CE1E5255DAB75008F2859 /* LoadViewController.swift in Sources */,
+				189D891225606E4F00A72C36 /* AddTransactionHeader.swift in Sources */,
 				182CE1DF255D9F91008F2859 /* AddSpendViewController.swift in Sources */,
 				182CE1E2255DA155008F2859 /* AddSpendView.swift in Sources */,
 				182CE1F7255E87A8008F2859 /* Spend.swift in Sources */,

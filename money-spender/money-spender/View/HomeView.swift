@@ -30,7 +30,7 @@ class HomeView: UIView {
     let walletContentView = UIView()
     let walletView = UIView()
 
-    let walletLabel = UILabel()
+    let lastSpendLabel = UILabel()
     let addTransactionButton: UIButton = {
         let addTransactionButton = UIButton(type: .system)
         addTransactionButton.layer.cornerRadius = 20
@@ -140,18 +140,18 @@ class HomeView: UIView {
             make.trailing.equalTo(walletView.snp.trailing).offset(-16)
         }
 
-        walletLabel.text = "Wallet"
-        walletLabel.textColor = .white
-        walletView.addSubview(walletLabel)
+        lastSpendLabel.text = "Last spend"
+        lastSpendLabel.textColor = .white
+        walletView.addSubview(lastSpendLabel)
 
-        walletLabel.snp.makeConstraints { make in
+        lastSpendLabel.snp.makeConstraints { make in
             make.top.equalTo(walletView.snp.top).offset(16)
             make.leading.equalTo(walletView.snp.leading).offset(16)
         }
 
         walletView.addSubview(moneySpendLabel)
         moneySpendLabel.snp.makeConstraints { make in
-            make.top.equalTo(walletLabel.snp.bottom).offset(10)
+            make.top.equalTo(lastSpendLabel.snp.bottom).offset(10)
             make.leading.equalTo(walletView.snp.leading).offset(16)
             make.bottom.equalTo(walletView.snp.bottom).offset(-10)
         }
