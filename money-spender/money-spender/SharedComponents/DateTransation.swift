@@ -9,8 +9,8 @@ import UIKit
 
 final class DateTransation: UIView {
 
-
     //MARK: - declaration
+    
     let iconImage: UIImageView = {
         let iconImage = UIImageView()
         let icon = UIImage(systemName: "applelogo")
@@ -18,7 +18,11 @@ final class DateTransation: UIView {
         return iconImage
     }()
 
-    let datepicker = UIDatePicker()
+    lazy var datepicker :UIDatePicker={
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        return datePicker
+    }()
     
     lazy var dateField : UITextField = {
         let dateField = UITextField()
@@ -28,8 +32,6 @@ final class DateTransation: UIView {
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.orange])
         return dateField
     }()
-    
-    
 
     // MARK: - initial
 

@@ -31,5 +31,9 @@ class LoadViewController: UITabBarController {
         modalPresentationStyle = .fullScreen
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
 
 }

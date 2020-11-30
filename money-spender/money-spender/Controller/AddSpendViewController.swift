@@ -28,5 +28,20 @@ class AddSpendViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        //addSpendView.dateController.datepicker.addTarget(self, action: #selector(userPickDate(datePicker:)), for: .valueChanged)
+        //addSpendView.tapGesture.addTarget(self, action: #selector(viewTapped(gestureRecognizer:)))
+    }
+    
+    
+    //MARK: - funtion
+    @objc func userPickDate(datePicker: UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "DD/MM/YYYY"
+        addSpendView.dateController.dateField.text = dateFormatter.string(from: datePicker.date)
+        addSpendView.endEditing(true)
+    }
+    
+    @objc func viewTapped(gestureRecognizer: UIGestureRecognizer){
+        addSpendView.endEditing(true)
     }
 }

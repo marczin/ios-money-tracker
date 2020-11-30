@@ -15,6 +15,9 @@ class AddSpendView: UIView {
 
     let topController = AddTransactionHeader()
     let dateController = DateTransation()
+    let descriptionController = DescriptionTransaction()
+    
+    let controller = AddSpendViewController()
     // MARK: -
     let stackContentView: UIStackView = {
         let stackContentView = UIStackView()
@@ -25,6 +28,7 @@ class AddSpendView: UIView {
         return stackContentView
     }()
     
+    let tapGesture = UITapGestureRecognizer()
     
     // MARK: - Inits
     init() {
@@ -39,7 +43,8 @@ class AddSpendView: UIView {
     // MARK: - function
     fileprivate func doLayout() {
         backgroundColor = .systemBackground
-
+    
+        addGestureRecognizer(tapGesture)
         addSubview(scrollView)
         scrollView.snp.makeConstraints { make in
             make.top.equalToSuperview()
@@ -57,7 +62,7 @@ class AddSpendView: UIView {
             make.width.equalTo(scrollView.snp.width)
         }
         stackContentView.addArrangedSubview(topController)
-        stackContentView.addArrangedSubview(dateController
-        )
+        stackContentView.addArrangedSubview(dateController)
+        stackContentView.addArrangedSubview(descriptionController)
     }
 }
