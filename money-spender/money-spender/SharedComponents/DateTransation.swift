@@ -12,26 +12,42 @@ final class DateTransation: UIView {
     //MARK: - declaration
     
     let iconImage: UIImageView = {
-        let iconImage = UIImageView()
+        let iconImageView = UIImageView()
         let icon = UIImage(systemName: "applelogo")
-        iconImage.image = icon
-        return iconImage
+        iconImageView.image = icon
+        iconImageView.contentMode = .scaleAspectFit
+        iconImageView.setContentHuggingPriority(.defaultHigh, for: .horizontal)
+        return iconImageView
     }()
 
-    lazy var datepicker :UIDatePicker={
+    lazy var datepicker :UIDatePicker = {
         let datePicker = UIDatePicker()
         datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.date = Date()
         return datePicker
     }()
     
     lazy var dateField : UITextField = {
         let dateField = UITextField()
         dateField.inputView = datepicker
+        dateField.inputAccessoryView = toolbar
         dateField.attributedPlaceholder = NSAttributedString(
             string: "Date",
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.orange])
         return dateField
     }()
+    
+    let barButtonItem = UIBarButtonItem()
+    
+    lazy var toolbar: UIToolbar = {
+        let toolbar = UIToolbar()
+        toolbar.setItems([barButtonItem], animated: false)
+        toolbar.sizeToFit()
+        toolbar.barStyle = .default
+        return toolbar
+    }()
+    
 
     // MARK: - initial
 
@@ -54,8 +70,6 @@ final class DateTransation: UIView {
             make.top.equalToSuperview()
             make.leading.equalToSuperview().offset(10)
             make.bottom.equalToSuperview()
-            make.height.equalTo(40)
-            make.width.equalTo(40)
         }
         
         addSubview(dateField)

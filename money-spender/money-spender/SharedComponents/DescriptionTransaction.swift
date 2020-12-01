@@ -10,13 +10,24 @@ import UIKit
 final class DescriptionTransaction: UIView {
     
     //MARK: - declaration
-    let descriptionField: UITextField = {
+    lazy var descriptionField: UITextField = {
         let descriptionField = UITextField()
         descriptionField.sizeToFit()
+        descriptionField.inputAccessoryView = toolbar
         descriptionField.attributedPlaceholder = NSAttributedString(
             string: "Description",
             attributes:[NSAttributedString.Key.foregroundColor: UIColor.orange])
         return descriptionField
+    }()
+    
+    let barButtonItem = UIBarButtonItem()
+    
+    lazy var toolbar: UIToolbar = {
+        let toolbar = UIToolbar()
+        toolbar.setItems([barButtonItem], animated: false)
+        toolbar.sizeToFit()
+        toolbar.barStyle = .default
+        return toolbar
     }()
     
     // MARK: - initial

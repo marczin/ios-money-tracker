@@ -25,9 +25,12 @@ final class AddTransactionHeader: UIView {
 
     let priceField: UITextField = {
         let priceField = UITextField()
-        priceField.text = "0 PLN"
+        priceField.attributedPlaceholder = NSAttributedString(
+            string: "0 PLN",
+            attributes:[NSAttributedString.Key.foregroundColor: UIColor.white])
         priceField.textColor = UIColor.white
         priceField.textAlignment = .right
+        priceField.keyboardType = .decimalPad
         return priceField
     }()
 

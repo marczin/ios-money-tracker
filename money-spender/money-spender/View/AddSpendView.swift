@@ -17,7 +17,6 @@ class AddSpendView: UIView {
     let dateController = DateTransation()
     let descriptionController = DescriptionTransaction()
     
-    let controller = AddSpendViewController()
     // MARK: -
     let stackContentView: UIStackView = {
         let stackContentView = UIStackView()

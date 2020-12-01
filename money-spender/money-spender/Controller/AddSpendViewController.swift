@@ -28,20 +28,60 @@ class AddSpendViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //addSpendView.dateController.datepicker.addTarget(self, action: #selector(userPickDate(datePicker:)), for: .valueChanged)
-        //addSpendView.tapGesture.addTarget(self, action: #selector(viewTapped(gestureRecognizer:)))
+        addSpendView.dateController.datepicker.addTarget(self, action: #selector(userPickDate(datePicker:)), for: .valueChanged)
+        addSpendView.tapGesture.addTarget(self, action: #selector(viewTapped(gestureRecognizer:)))
+        
+        addSpendView.topController.categoryPicker.delegate = self
+        addBarButtons()
     }
     
     
     //MARK: - funtion
+    
+    func addBarButtons(){
+   /*     addSpendView.dateController.barButtonItem.target = self
+        addSpendView.dateController.barButtonItem.action = #selector(doneTapped)
+        addSpendView.dateController.barButtonItem.title = "Done"
+        addSpendView.dateController.barButtonItem.style = .done
+        
+        addSpendView.descriptionController.barButtonItem.target = self
+        addSpendView.descriptionController.barButtonItem.action = #selector(doneTapped)
+        addSpendView.descriptionController.barButtonItem.title = "Done"
+        addSpendView.descriptionController.barButtonItem.style = .done
+*/
+        addSpendView.topController.categoryField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+        addSpendView.topController.priceField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+        addSpendView.dateController.dateField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+        addSpendView.descriptionController.descriptionField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+    }
+    
     @objc func userPickDate(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "DD/MM/YYYY"
+        dateFormatter.dateFormat = "MM/dd/yyyy"
         addSpendView.dateController.dateField.text = dateFormatter.string(from: datePicker.date)
-        addSpendView.endEditing(true)
     }
     
     @objc func viewTapped(gestureRecognizer: UIGestureRecognizer){
         addSpendView.endEditing(true)
     }
+    
+    @objc func doneTapped(){
+        addSpendView.endEditing(true)
+    }
+}
+
+extension AddSpendViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        Category.count
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return Category(rawValue: row)?.description;
+    }
+    
+    
 }
