@@ -28,5 +28,56 @@ class AddSpendViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        addSpendView.dateController.datepicker.addTarget(self, action: #selector(userPickDate(datePicker:)), for: .valueChanged)
+        addSpendView.tapGesture.addTarget(self, action: #selector(viewTapped(gestureRecognizer:)))
+        
+        addSpendView.topController.categoryPicker.delegate = self
+        addBarButtons()
     }
+    
+    
+    //MARK: - funtion
+    
+    func addBarButtons(){
+
+        addSpendView.topController.categoryField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+        addSpendView.topController.priceField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+        addSpendView.dateController.dateField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+        addSpendView.descriptionController.descriptionField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
+    }
+    
+    
+    @objc func userPickDate(datePicker: UIDatePicker){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        addSpendView.dateController.dateField.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    @objc func viewTapped(gestureRecognizer: UIGestureRecognizer){
+        addSpendView.endEditing(true)
+    }
+    
+    @objc func doneTapped(){
+        addSpendView.endEditing(true)
+    }
+}
+
+extension AddSpendViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        Category.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Category(rawValue: row)?.description;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        addSpendView.topController.categoryField.text = Category(rawValue: row)?.description
+    }
+    
+    
 }

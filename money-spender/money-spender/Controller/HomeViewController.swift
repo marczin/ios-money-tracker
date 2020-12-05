@@ -35,14 +35,15 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeView.addTransactionButton.addTarget(homeViewModel, action: #selector(homeViewModel.addButtonTapped), for: .touchUpInside)
+//        homeView.addTransactionButton.addTarget(homeViewModel, action: #selector(homeViewModel.addButtonTapped), for: .touchUpInside)
+        homeView.addTransactionComponent.addTransactionButton.addTarget(homeViewModel, action: #selector(homeViewModel.addButtonTapped), for: .touchUpInside)
         homeViewModel.viewDidLoadAction()
     }
 
     func setWalletValues(total: String, monthly: String, spend: String) {
-        homeView.totalBalanceLabel.text = total
-        homeView.monthlyChangeLabel.text = monthly
-        homeView.moneySpendLabel.text = spend
+        homeView.balanceComponent.totalBalanceLabel.text = total
+        homeView.balanceComponent.monthlyChangeLabel.text = monthly
+        homeView.addTransactionComponent.moneySpendLabel.text = spend
     }
 }
 

@@ -10,8 +10,7 @@ import UIKit
 class LoadViewController: UITabBarController {
 
     let homeController = HomeViewController()
-    let addSpendController = AddSpendViewController()
-    
+    let spendListViewController = SpendListViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +18,10 @@ class LoadViewController: UITabBarController {
         homeController.tabBarItem.image = #imageLiteral(resourceName: "home")
         homeController.title = "Home"
         
-        addSpendController.tabBarItem.image = #imageLiteral(resourceName: "add")
-        addSpendController.title = "Add"
-        let controllers: [UINavigationController] = [homeController,addSpendController].map({
+        spendListViewController.tabBarItem.image = #imageLiteral(resourceName: "add")
+        spendListViewController.title = "All spends"
+        
+        let controllers: [UINavigationController] = [homeController, spendListViewController].map({
             let navController = UINavigationController(rootViewController: $0)
             navController.setNavigationBarHidden(true, animated: false)
             return navController
@@ -29,6 +29,10 @@ class LoadViewController: UITabBarController {
         
         setViewControllers(controllers, animated: false)
         modalPresentationStyle = .fullScreen
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
 
