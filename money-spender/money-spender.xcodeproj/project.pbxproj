@@ -11,9 +11,13 @@
 		182CE1E2255DA155008F2859 /* AddSpendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CE1E1255DA155008F2859 /* AddSpendView.swift */; };
 		182CE1E5255DAB75008F2859 /* LoadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CE1E4255DAB75008F2859 /* LoadViewController.swift */; };
 		182CE1F7255E87A8008F2859 /* Spend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182CE1F6255E87A7008F2859 /* Spend.swift */; };
-		1832A6E1256B256800848409 /* DescriptionTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832A6E0256B256800848409 /* DescriptionTransaction.swift */; };
-		189D891225606E4F00A72C36 /* AddTransactionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D891125606E4F00A72C36 /* AddTransactionHeader.swift */; };
-		189D89162560810C00A72C36 /* DateTransation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D89152560810C00A72C36 /* DateTransation.swift */; };
+		1832A6E1256B256800848409 /* DescriptionTransactionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832A6E0256B256800848409 /* DescriptionTransactionComponent.swift */; };
+		189D891225606E4F00A72C36 /* AddTransactionHeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D891125606E4F00A72C36 /* AddTransactionHeaderComponent.swift */; };
+		189D89162560810C00A72C36 /* DateTransationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D89152560810C00A72C36 /* DateTransationComponent.swift */; };
+		18CF522525794D5100ABCB04 /* SpendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF522425794D5100ABCB04 /* SpendListViewController.swift */; };
+		18CF522825794E8000ABCB04 /* SpendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF522725794E8000ABCB04 /* SpendListView.swift */; };
+		18CF52322579520700ABCB04 /* AddTransactionComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF52312579520700ABCB04 /* AddTransactionComponent.swift */; };
+		18CF5237257B9FB800ABCB04 /* BalanceComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF5236257B9FB800ABCB04 /* BalanceComponent.swift */; };
 		18D0CCCC255897270078BABB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0CCCB255897270078BABB /* AppDelegate.swift */; };
 		18D0CCD0255897270078BABB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D0CCCF255897270078BABB /* ViewController.swift */; };
 		18D0CCD52558972A0078BABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D0CCD42558972A0078BABB /* Assets.xcassets */; };
@@ -31,9 +35,13 @@
 		182CE1E1255DA155008F2859 /* AddSpendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSpendView.swift; sourceTree = "<group>"; };
 		182CE1E4255DAB75008F2859 /* LoadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadViewController.swift; sourceTree = "<group>"; };
 		182CE1F6255E87A7008F2859 /* Spend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spend.swift; sourceTree = "<group>"; };
-		1832A6E0256B256800848409 /* DescriptionTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTransaction.swift; sourceTree = "<group>"; };
-		189D891125606E4F00A72C36 /* AddTransactionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionHeader.swift; sourceTree = "<group>"; };
-		189D89152560810C00A72C36 /* DateTransation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransation.swift; sourceTree = "<group>"; };
+		1832A6E0256B256800848409 /* DescriptionTransactionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTransactionComponent.swift; sourceTree = "<group>"; };
+		189D891125606E4F00A72C36 /* AddTransactionHeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionHeaderComponent.swift; sourceTree = "<group>"; };
+		189D89152560810C00A72C36 /* DateTransationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTransationComponent.swift; sourceTree = "<group>"; };
+		18CF522425794D5100ABCB04 /* SpendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendListViewController.swift; sourceTree = "<group>"; };
+		18CF522725794E8000ABCB04 /* SpendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpendListView.swift; sourceTree = "<group>"; };
+		18CF52312579520700ABCB04 /* AddTransactionComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTransactionComponent.swift; sourceTree = "<group>"; };
+		18CF5236257B9FB800ABCB04 /* BalanceComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceComponent.swift; sourceTree = "<group>"; };
 		18D0CCC8255897270078BABB /* money-spender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "money-spender.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D0CCCB255897270078BABB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18D0CCCF255897270078BABB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -75,11 +83,21 @@
 		189D8914256080E300A72C36 /* SharedComponents */ = {
 			isa = PBXGroup;
 			children = (
-				189D891125606E4F00A72C36 /* AddTransactionHeader.swift */,
-				189D89152560810C00A72C36 /* DateTransation.swift */,
-				1832A6E0256B256800848409 /* DescriptionTransaction.swift */,
+				18CF522A2579511600ABCB04 /* home */,
+				189D891125606E4F00A72C36 /* AddTransactionHeaderComponent.swift */,
+				189D89152560810C00A72C36 /* DateTransationComponent.swift */,
+				1832A6E0256B256800848409 /* DescriptionTransactionComponent.swift */,
 			);
 			path = SharedComponents;
+			sourceTree = "<group>";
+		};
+		18CF522A2579511600ABCB04 /* home */ = {
+			isa = PBXGroup;
+			children = (
+				18CF52312579520700ABCB04 /* AddTransactionComponent.swift */,
+				18CF5236257B9FB800ABCB04 /* BalanceComponent.swift */,
+			);
+			path = home;
 			sourceTree = "<group>";
 		};
 		18D0CCBF255897270078BABB = {
@@ -130,6 +148,7 @@
 			children = (
 				18D0CCEB255899000078BABB /* HomeView.swift */,
 				182CE1E1255DA155008F2859 /* AddSpendView.swift */,
+				18CF522725794E8000ABCB04 /* SpendListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +159,7 @@
 				18D0CCE8255898450078BABB /* HomeViewController.swift */,
 				182CE1DE255D9F91008F2859 /* AddSpendViewController.swift */,
 				182CE1E4255DAB75008F2859 /* LoadViewController.swift */,
+				18CF522425794D5100ABCB04 /* SpendListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -194,6 +214,7 @@
 				TargetAttributes = {
 					18D0CCC7255897270078BABB = {
 						CreatedOnToolsVersion = 12.0.1;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -275,19 +296,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D0CCD0255897270078BABB /* ViewController.swift in Sources */,
-				1832A6E1256B256800848409 /* DescriptionTransaction.swift in Sources */,
-				189D89162560810C00A72C36 /* DateTransation.swift in Sources */,
+				1832A6E1256B256800848409 /* DescriptionTransactionComponent.swift in Sources */,
+				189D89162560810C00A72C36 /* DateTransationComponent.swift in Sources */,
 				18D0CCF2255A007F0078BABB /* HomeViewModel.swift in Sources */,
 				182CE1E5255DAB75008F2859 /* LoadViewController.swift in Sources */,
-				189D891225606E4F00A72C36 /* AddTransactionHeader.swift in Sources */,
+				189D891225606E4F00A72C36 /* AddTransactionHeaderComponent.swift in Sources */,
+				18CF522525794D5100ABCB04 /* SpendListViewController.swift in Sources */,
 				18F9722C2575C9CC0046BDDE /* CategoryEnum.swift in Sources */,
 				182CE1DF255D9F91008F2859 /* AddSpendViewController.swift in Sources */,
 				182CE1E2255DA155008F2859 /* AddSpendView.swift in Sources */,
+				18CF52322579520700ABCB04 /* AddTransactionComponent.swift in Sources */,
 				182CE1F7255E87A8008F2859 /* Spend.swift in Sources */,
 				18D0CCCC255897270078BABB /* AppDelegate.swift in Sources */,
 				18F972292575ADC00046BDDE /* CustomExtension.swift in Sources */,
 				18D0CCEC255899000078BABB /* HomeView.swift in Sources */,
 				18D0CCE9255898450078BABB /* HomeViewController.swift in Sources */,
+				18CF5237257B9FB800ABCB04 /* BalanceComponent.swift in Sources */,
+				18CF522825794E8000ABCB04 /* SpendListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XV6AN4FPS2;
 				INFOPLIST_FILE = "money-spender/Info.plist";
@@ -436,6 +462,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "pl.marcinrosol.money-spender";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -447,6 +474,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XV6AN4FPS2;
 				INFOPLIST_FILE = "money-spender/Info.plist";

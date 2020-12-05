@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class AddTransactionHeader: UIView {
+final class AddTransactionHeaderComponent: UIView {
     
     let addLabel: UILabel = {
         let addLabel = UILabel()

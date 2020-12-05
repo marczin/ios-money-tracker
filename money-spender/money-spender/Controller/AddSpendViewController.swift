@@ -39,21 +39,13 @@ class AddSpendViewController: UIViewController {
     //MARK: - funtion
     
     func addBarButtons(){
-   /*     addSpendView.dateController.barButtonItem.target = self
-        addSpendView.dateController.barButtonItem.action = #selector(doneTapped)
-        addSpendView.dateController.barButtonItem.title = "Done"
-        addSpendView.dateController.barButtonItem.style = .done
-        
-        addSpendView.descriptionController.barButtonItem.target = self
-        addSpendView.descriptionController.barButtonItem.action = #selector(doneTapped)
-        addSpendView.descriptionController.barButtonItem.title = "Done"
-        addSpendView.descriptionController.barButtonItem.style = .done
-*/
+
         addSpendView.topController.categoryField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
         addSpendView.topController.priceField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
         addSpendView.dateController.dateField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
         addSpendView.descriptionController.descriptionField.addToolBar( title: "Done", style: .done, target: self, selector: #selector(doneTapped))
     }
+    
     
     @objc func userPickDate(datePicker: UIDatePicker){
         let dateFormatter = DateFormatter()
@@ -79,8 +71,12 @@ extension AddSpendViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         Category.count
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return Category(rawValue: row)?.description;
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        addSpendView.topController.categoryField.text = Category(rawValue: row)?.description
     }
     
     

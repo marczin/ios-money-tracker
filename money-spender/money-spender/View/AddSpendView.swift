@@ -13,9 +13,9 @@ class AddSpendView: UIView {
     let scrollView = UIScrollView()
     let contentView = UIView()
 
-    let topController = AddTransactionHeader()
-    let dateController = DateTransation()
-    let descriptionController = DescriptionTransaction()
+    let topController = AddTransactionHeaderComponent()
+    let dateController = DateTransationComponent()
+    let descriptionController = DescriptionTransactionComponent()
     
     // MARK: -
     let stackContentView: UIStackView = {

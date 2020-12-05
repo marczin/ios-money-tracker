@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DateTransation: UIView {
+final class DateTransationComponent: UIView {
 
     //MARK: - declaration
     

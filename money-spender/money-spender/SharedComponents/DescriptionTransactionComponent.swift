@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DescriptionTransaction: UIView {
+final class DescriptionTransactionComponent: UIView {
     
     //MARK: - declaration
     lazy var descriptionField: UITextField = {
