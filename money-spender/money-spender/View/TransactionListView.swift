@@ -7,8 +7,11 @@
 
 import UIKit
 
-class SpendListView: UIView {
+class TransactionListView: UIView {
     
+    // MARK: - declarations
+    
+    let listComponent = ListComponent()
     
     // MARK: - initial
     init() {
@@ -23,6 +26,12 @@ class SpendListView: UIView {
     // MARK: - function
     
     func doLayout() {
-        backgroundColor = .red
+        addSubview(listComponent)
+        listComponent.snp.makeConstraints { make in
+            make.top.equalToSuperview()
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
 }

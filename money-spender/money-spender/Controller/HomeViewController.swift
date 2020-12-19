@@ -35,7 +35,6 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        homeView.addTransactionButton.addTarget(homeViewModel, action: #selector(homeViewModel.addButtonTapped), for: .touchUpInside)
         homeView.addTransactionComponent.addTransactionButton.addTarget(homeViewModel, action: #selector(homeViewModel.addButtonTapped), for: .touchUpInside)
         homeViewModel.viewDidLoadAction()
     }
@@ -53,7 +52,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
 
 
-    func homeViewModel(_ viewModel: HomeViewModel, addSpendController addController: AddSpendViewController) {
+    func homeViewModel(_ viewModel: HomeViewModel, addSpendController addController: AddTransactionViewController) {
         present(addController, animated: true)
     }
 }

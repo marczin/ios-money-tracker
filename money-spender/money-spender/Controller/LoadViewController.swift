@@ -10,7 +10,7 @@ import UIKit
 class LoadViewController: UITabBarController {
 
     let homeController = HomeViewController()
-    let spendListViewController = SpendListViewController()
+    let spendListViewController = TransactionListViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()

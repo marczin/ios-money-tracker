@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddSpendViewController: UIViewController {
+class AddTransactionViewController: UIViewController {
     
     // MARK: - properties
     
@@ -62,7 +62,7 @@ class AddSpendViewController: UIViewController {
     }
 }
 
-extension AddSpendViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension AddTransactionViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         1
     }

@@ -8,17 +8,17 @@
 import UIKit
 
 enum Category: Int {
-    case Food = 0
-    case Car = 1
-    case Groceries = 2
+    case food = 0
+    case car = 1
+    case groceries = 2
     
-    static var count: Int { return Category.Groceries.rawValue + 1 }
+    static var count: Int { return Category.groceries.rawValue + 1 }
     
     var description: String {
             switch self {
-            case .Food: return "Food"
-            case .Car   : return "Car"
-            case .Groceries  : return "Groceries"
+            case .food: return "Food"
+            case .car   : return "Car"
+            case .groceries  : return "Groceries"
             }
         }
 }

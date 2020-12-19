@@ -7,11 +7,12 @@
 
 import UIKit
 
-class SpendListViewController: UIViewController {
+class TransactionListViewController: UIViewController {
     
     // MARK: - declaration
     
-    let spendListView = SpendListView()
+    let controllerViewModel = TransactionListViewModel()
+    let transactionListView = TransactionListView()
     
     // MARK: - initial
     init() {
@@ -23,13 +24,15 @@ class SpendListViewController: UIViewController {
     }
     
     override func loadView() {
-        view = spendListView
+        view = transactionListView
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        controllerViewModel.requestData()
+        controllerViewModel.setup(tableView: transactionListView.listComponent.tableView)
     }
     
-    // MARK: - functions
-    
+
 }
