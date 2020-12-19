@@ -32,7 +32,6 @@ class TransactionService: TransactionServiceProtocol {
             decoder.dateDecodingStrategyFormatters = [ DateFormatter.standardT,
                                                        DateFormatter.standard,
                                                        DateFormatter.yearMonthDay ]
-            
             do{
                 result = try decoder.decode(Array<Transaction>.self, from: data)
             }
